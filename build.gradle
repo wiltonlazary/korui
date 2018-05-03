@@ -1,13 +1,28 @@
 buildscript {
+	ext.projectVersion = '0.19.4-SNAPSHOT'
+	ext.projectName = 'korui'
+	ext.projectGroup = 'com.soywiz'
+	ext.projectDesc = 'Korui: Kotlin cORoutines User Interfaces for Kotlin Common'
+	ext.projectHost = 'github'
+	ext.projectOrg = 'korlibs'
+	ext.projectLicense = 'MIT'
+	ext.projectDevelNick = 'soywiz'
+	ext.projectDevelName = 'Carlos Ballesteros Velasco'
+	ext.projectInceptionYear = 2017
+
+	ext.koragVersion = '0.19.1'
+	ext.kotlinVersion = '1.2.21'
+
 	repositories {
 		mavenLocal()
-		maven { url "https://dl.bintray.com/kotlin/kotlin-eap-1.1" }
 		jcenter()
-		mavenCentral()
+		maven { url "https://plugins.gradle.org/m2/" }
 	}
+
 	dependencies {
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
-		classpath "com.jtransc:jtransc-gradle-plugin:$jtranscVersion"
+		classpath "gradle.plugin.com.soywiz:korlibs-build-gradle-plugin:0.1.5"
 	}
 }
+
+apply plugin: 'com.soywiz.korlibs-build-gradle-plugin'

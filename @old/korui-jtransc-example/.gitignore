@@ -1,3 +1,7 @@
+/build
+/classes
+/out
+/.gradle
 /.gradle
 /.idea
 /build

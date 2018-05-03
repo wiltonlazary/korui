@@ -1,7 +1,13 @@
 rootProject.name = 'korui-root'
 include(
+		'korui-common',
 		'korui',
-		'korui-core',
 		'korui-android',
-		'korui-jtransc-example'
+		'korui-js',
+		//'korui-jtransc-example',
 )
+
+project(':korui-common').projectDir = file('korui/common')
+project(':korui').projectDir = file('korui/jvm')
+project(':korui-android').projectDir = file('korui/android')
+project(':korui-js').projectDir = file('korui/js')
